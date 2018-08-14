@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+        "spec": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-118630-30324-1uzmz54.t0sk0529"
+    ]
+  ],
+  "_from": "../d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+  "_id": "preview-inline@1.5.0",
+  "_inCache": true,
+  "_location": "/preview-inline",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+    "spec": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+  "_shasum": "a2a61f77db51a38afabdd18595fa11d2fbeb3e77",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-118630-30324-1dpdwyv.rjd53tyb9/package.tgz",
+  "_where": "/tmp/apm-install-dir-118630-30324-1uzmz54.t0sk0529",
+  "bugs": {
+    "url": "https://github.com/mangecoeur/preview-inline/issues"
+  },
+  "consumedServices": {
+    "bibliographicReferences": {
+      "versions": {
+        "1.0.0": "getReferences"
+      }
+    }
+  },
+  "dependencies": {},
+  "description": "Inline preview of LaTeX maths and images in markdown files",
+  "devDependencies": {
+    "eslint": "^3.7.0",
+    "eslint-config-google": "^0.6.0"
+  },
+  "engines": {
+    "atom": ">=1.6.0 <2.0.0"
+  },
+  "homepage": "https://github.com/mangecoeur/preview-inline#readme",
+  "keywords": [
+    "preview",
+    "math",
+    "image",
+    "markdown",
+    "latex",
+    "commonmark",
+    "inline",
+    "productivity",
+    "academic"
+  ],
+  "license": "MIT",
+  "line_endings": {
+    "value": "unix",
+    "level": "error"
+  },
+  "main": "./lib/preview-inline",
+  "max_line_length": {
+    "value": 120,
+    "level": "warn"
+  },
+  "name": "preview-inline",
+  "optionalDependencies": {},
+  "readme": "# Preview LaTeX maths and Images inline\n\n**For markdown, [pandoc flavor markdown language](https://atom.io/packages/language-pfm)  or [language-markdown](https://atom.io/packages/language-markdown) is recommended**\n\nPreview Latex formula and images embedded directly in your documents - no need to generate a full PDF or HTML preview to check your figures and formula! Works in Markdown and Tex files.\n\n<!-- keep absolute path for atom package page -->\n![Demo of preview-inline](https://raw.githubusercontent.com/mangecoeur/preview-inline/master/resources/demo.gif)\n\n\n# Usage\n\nPlace your cursor within the image link or inside a math block and trigger `preview-inline: show` or use the default keyboard shortcut <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>p</kbd>.\n\nWorks with inline maths between `$` signs and blocks between `$$`, in markdown and LaTeX, as well as raw and latex code blocks in triple-backticks in Markdown. You can also select arbitrary regions to preview.\n\nYou will want to install an improved markdown syntax packages such as [pandoc flavor markdown language](https://atom.io/packages/language-pfm) (`language-pfm` package) or [language-markdown](https://atom.io/packages/language-markdown) first for support for math regions delimitated by '$' or '$$'. Otherwise only raw code and tex blocks in the standard github-markdown should work.\n\n## Updates\n\n- Added support for common Latex environments for maths\n- Added basic support for Latex images (`\\includegraphics{}`)\n\n\n## See also\n\nSome handy packages for working on markdown documents:\n\n- [document-outline](https://atom.io/packages/document-outline) (shameless plug) Displays a hierarchical, interactive outline tree view of your document. This is particularly useful for working on long form documents such as academic papers and theses.\n- [markdown preview plus](https://atom.io/packages/markdown-preview-plus) enhanced HTML preview of markdown documents\n- [build](https://atom.io/packages/build) plus `build-makefile`. If you use Pandoc to build serious documents, your pandoc command starts to get pretty fancy. Do yourself a favour and write a makefile for that, then use atom-build to easily trigger building your document from the editor.\n- [language-pfm](https://atom.io/packages/language-pfm) or [language-markdown](https://atom.io/packages/language-markdown) for enabling math detection.\n\n# Contribute\n\nContributions via pull request are welcome.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mangecoeur/preview-inline.git"
+  },
+  "version": "1.5.0"
+}

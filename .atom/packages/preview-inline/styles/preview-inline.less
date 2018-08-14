@@ -1,0 +1,193 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+// @import 'octicon-utf-codes';
+
+
+.preview-inline.output-bubble {
+  @preview-fg: @base-background-color;
+  @preview-bg: @text-color;
+
+  // @light-preview-bg: fadein(lighten(@syntax-background-color, 40%), 100%);
+  // @dark-preview-bg: fadein(lighten(@syntax-background-color, 15%), 100%);
+  // @preview-bg: contrast(@syntax-text-color, @dark-preview-bg, @light-preview-bg, 20%);
+  // @preview-fg: @syntax-text-color;
+
+  // @light-preview-bg: fadein(lighten(@syntax-background-color, 40%), 100%);
+  // @dark-preview-bg: fadein(darken(@syntax-background-color, 15%), 100%);
+  // @preview-bg: contrast(@syntax-text-color, @dark-preview-bg, @light-preview-bg, 43%);
+
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 4px;
+  padding: 5px;
+  color: @preview-fg;
+  border-radius: @component-border-radius;
+  border-top-left-radius: 0;
+  background: @preview-bg;
+  box-shadow: 0 1px 3px hsla(0, 0, 0%, 0.4);
+  font-size: @font-size;
+  max-width: 5em;
+  max-height: 3em;
+  // transition: opacity 300ms, max-width 2s, max-height 2s, background-color 2s, transform 2s;
+  // transition: width 2s, height 2s;
+  transition: max-width 300ms linear, max-height 300ms ease-in-out;
+
+  &.image {
+    .contents {
+      min-width: 1.5em;
+
+      img {
+
+        background-color: white;
+      }
+
+      svg {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      video, img, svg {
+          display: block;
+          height: 400px;
+          overflow: scroll;
+      }
+    }
+  }
+
+  .bugfix-overlay {
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    background: transparent;
+    box-shadow: none;
+    color: none;
+    border: none;
+    margin: 0px;
+    left: 0px;
+  }
+
+  .math-element {
+    visibility: hidden;
+    transition: visibility 0s, opacity 200ms;
+    // opacity: 0.2;
+    position: relative;
+
+    svg {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .MathJax_Display,
+    .MathJax_SVG_Display {
+      color: @input-background-color;
+      margin: 0;
+    }
+
+    .MathJax {
+      font-size: @font-size * 1.5
+    }
+  }
+
+  .loading {
+    display: inline-block;
+    visibility: visible;
+  }
+
+  &.ready {
+    max-width: 1000px;
+    max-height: 1000px;
+
+    .loading {
+      display: none;
+    }
+
+    .math-element {
+      visibility: visible;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    padding-right: 8px;
+    width: 3em;
+
+    .zoom-btns {
+      margin-bottom: 0.5em;
+      .btn {
+
+        margin-bottom: 0.0em;
+      }
+      .zoom-in {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 2.5em;
+      }
+      .zoom-out {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        // padding-left: 1px;
+        margin-top: -1px;
+        width: 2.5em;
+      }
+    }
+
+    .close-preview {
+      width: 2.5em;
+
+      margin-bottom: 0.5em;
+    }
+  }
+
+
+  .contents {
+    min-width: 1.5em;
+    // resize: both;
+    // overflow: scroll;
+  }
+
+  .loading,
+  .loading:before,
+  .loading:after {
+    background: @preview-fg;
+    animation: load1 800ms infinite ease-in-out;
+    width: 2px;
+    height: 1.4em;
+  }
+  .loading:before,
+  .loading:after {
+    position: absolute;
+    top: 0;
+    content: '';
+  }
+  .loading:before {
+    left: -0.4em;
+    animation-delay: -0.3s;
+  }
+  .loading {
+    text-indent: -9999em;
+    margin: 8px 5px;
+    position: relative;
+    font-size: 11px;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+  }
+  .loading:after {
+    left: 0.4em;
+  }
+
+  @keyframes load1 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0 @preview-fg;
+      height: 1.4em;
+    }
+    40% {
+      box-shadow: 0 -0.5em @preview-fg;
+      height: 1.5em;
+    }
+  }
+
+}

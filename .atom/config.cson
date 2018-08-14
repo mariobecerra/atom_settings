@@ -1,0 +1,48 @@
+"*":
+  "atom-latex":
+    build_after_save: false
+    preview_after_build: "Do nothing"
+    save_on_build: true
+  core:
+    disabledPackages: [
+      "autocomplete-latex"
+      "language-latex"
+      "latex"
+      "latextools"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    fontSize: 11
+    softWrap: true
+  "exception-reporting":
+    userId: "05fc37e8-08e0-40fc-98d7-ce12563c581c"
+  "spell-check":
+    addKnownWords: true
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain.null-grammar"
+      "text.tex.latex"
+    ]
+    knownWords: [
+      "perceptron"
+      "Convolutional"
+      "mathbb"
+      "cdot"
+      "includegraphics"
+      "textwidth"
+      "ldots"
+      "textbf"
+      "tanh"
+      "Frequentist"
+      "Backpropagation"
+      "citeauthor"
+      "frequentist"
+    ]
+  welcome:
+    showOnStartup: false

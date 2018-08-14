@@ -1,0 +1,32 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+# 'context-menu':
+#   'atom-text-editor[data-grammar="source gfm"]': [
+#     {
+#       'label': 'Preview Inline'
+#       'command': 'preview-inline:show'
+#     }
+#   ]
+#   'atom-text-editor[data-grammar="text tex latex"]': [
+#     {
+#         'label': 'Preview Inline'
+#         'command': 'preview-inline:show'
+#     }
+#   ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Preview Inline'
+      'submenu': [
+        {
+          'label': 'Show'
+          'command': 'preview-inline:show'
+        }
+        {
+          'label': 'Clear'
+          'command': 'preview-inline:clear'
+        }
+      ]
+    ]
+  }
+]
